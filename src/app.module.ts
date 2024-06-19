@@ -1,7 +1,6 @@
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
-import { DirectiveLocation, GraphQLDirective } from 'graphql';
 // import { upperDirectiveTransformer } from './common/directives/upper-case.directive';
 import { ProfilesModule } from './profiles/profiles.module';
 import { join } from 'path';
@@ -29,7 +28,7 @@ import { join } from 'path';
     // }),
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      typePaths: ['./**/*.graphql'],
+      typePaths: ['./**/*.gql'],
       definitions: {
         path: join(process.cwd(), 'src/graphql.ts'),
         outputAs: 'class',

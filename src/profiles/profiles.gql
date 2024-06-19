@@ -2,9 +2,13 @@ type Profile {
   id: String!
   firstName: String!
   lastName: String!
-  birthday: Date!
+  birthday: String!
 }
 
 type Query {
-  getProfile: [Profile]!
+  getProfile(id: Int!): [Profile]!
+}
+
+type Mutation {
+  createProfile(firstName: String!, lastName: String!): Profile!
 }
