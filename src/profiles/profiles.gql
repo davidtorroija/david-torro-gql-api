@@ -1,0 +1,10 @@
+type Profile {
+  id: String!
+  firstName: String!
+  lastName: String!
+  birthday: Date!
+}
+
+type Query {
+  getProfile: [Profile]!
+}
