@@ -17,6 +17,8 @@ export class Profile {
 
 export abstract class IQuery {
     abstract getProfile(id: number): Nullable<Profile>[] | Promise<Nullable<Profile>[]>;
+
+    abstract getProfiles(): Nullable<Profile>[] | Promise<Nullable<Profile>[]>;
 }
 
 export abstract class IMutation {
